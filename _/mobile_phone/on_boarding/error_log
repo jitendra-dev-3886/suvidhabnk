@@ -1,0 +1,15 @@
+[06-Sep-2021 20:18:57 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/my_onbarding.php on line 8
+[06-Sep-2021 20:18:57 Asia/Kolkata] PHP Notice:  Undefined index: owner in /home/cosmosso/public_html/mobile_phone/on_boarding/my_onbarding.php on line 9
+[06-Sep-2021 20:18:57 Asia/Kolkata] PHP Notice:  Undefined index: owner_id in /home/cosmosso/public_html/mobile_phone/on_boarding/my_onbarding.php on line 10
+[06-Sep-2021 20:18:57 Asia/Kolkata] PHP Notice:  Undefined index: partner_id in /home/cosmosso/public_html/mobile_phone/on_boarding/my_onbarding.php on line 11
+[06-Sep-2021 20:18:57 Asia/Kolkata] PHP Notice:  Undefined index: merchant_code in /home/cosmosso/public_html/mobile_phone/on_boarding/my_onbarding.php on line 12
+[06-Sep-2021 20:18:57 Asia/Kolkata] PHP Notice:  Undefined index: code in /home/cosmosso/public_html/mobile_phone/on_boarding/my_onbarding.php on line 13
+[06-Sep-2021 20:42:49 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5
+[06-Sep-2021 20:43:25 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5
+[06-Sep-2021 20:43:27 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5
+[06-Sep-2021 20:43:28 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5
+[06-Sep-2021 20:43:53 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5
+[06-Sep-2021 20:43:57 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5
+[06-Sep-2021 20:44:17 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5
+[06-Sep-2021 20:44:41 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5
+[06-Sep-2021 20:44:49 Asia/Kolkata] PHP Notice:  Undefined index: mobile in /home/cosmosso/public_html/mobile_phone/on_boarding/isValid.php on line 5

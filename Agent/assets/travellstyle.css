@@ -1,0 +1,126 @@
+
+.daterangepicker.ltr.show-calendar.opensright {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 7px 5px 30px -18px rgb(0 0 0 / 50%);
+}
+
+td.today.active.start-date.available {
+    background-color: #18A3AE;
+}
+
+th.prev.available,th.next.available{
+    background-color: #18A3AE;
+}
+
+th.prev.available span,th.next.available span{
+   border-color: #fff !important;
+}
+
+button.btn.dropdown-toggle.btn-light,input.form-control{
+    border: 1px solid #18A3AE;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100% !important;
+}
+
+.btn-light{
+    background-color: none !important;
+}
+
+h5#exampleModalLabel {
+    color: #18A3AE;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.form-control[readonly]{
+    background-color: white !important;
+}
+
+.guestno {
+    display: flex;
+    align-items: center;
+}
+
+input.adultsno,input.childno{
+    width: 50px;
+    margin:0 10px;
+}
+
+.chlddecbtn, .chldincbtn,.adldecbtn,.adlincbtn{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border-radius: 50%;
+    border: 0.5px solid #636e72;
+}
+.chlddecbtn:hover,.chldincbtn:hover,.adldecbtn:hover,.adlincbtn:hover{
+    color:#18A3AE;
+    border: 0.5px solid #18A3AE;
+}
+
+
+.guestadroommen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 5px;
+}
+
+div#guestdealisdiv {
+    border-bottom: 0.5px solid #b2bec3;
+}
+
+.addrooanbtn{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    float: right;
+    margin-top: 20px;
+    padding:10px 15px;
+    cursor:pointer;
+}
+ .removeroombtn{
+     display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+   float: right;
+     padding:10px 15px;
+    margin-bottom: 20px;
+    cursor:pointer;
+}
+
+.addrooanbtn:hover,.removeroombtn:hover{
+    background: rgba(23, 233, 255, 0.13);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

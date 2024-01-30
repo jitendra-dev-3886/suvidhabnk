@@ -1,0 +1,13 @@
+<?php
+include_once 'db.php';
+if(isset($_POST['value'])){
+$colors = implode(',', $_POST['value']);
+echo $colors;
+}
+$dbObj = new db();
+$db = $dbObj->db();
+if($db->query("INSERT INTO `menu_management`(`ID`, `MENU`, `DATE`) VALUES (`$ID`,`$MENU`,`$DATE`)")){
+    echo "Success";
+}
+
+?>

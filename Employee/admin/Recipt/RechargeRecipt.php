@@ -1,0 +1,214 @@
+<?php
+session_start();
+error_reporting(0);
+    include("../../Db/config.php");
+    include("../include/Auth.php");
+    // $id = $_GET['id'];
+    $refrence = $_GET['refrence_id'];
+    // $status = $_GET['service'];
+//   echo $refrence;
+    //fetch static_bbps
+    $static_bbps = $con->query("SELECT * FROM `recharge_transaction` WHERE REFERENCE_ID='$refrence'")->fetch_assoc();
+    $op = explode(",", $static_bbps['OPERATOR']);
+    $st = explode(",", $static_bbps['STATUS']);
+        // var_dump($static_bbps);
+        // exit;
+
+    class numbertowordconvertsconver {
+    function convert_number($number) 
+    {
+        if (($number < 0) || ($number > 999999999)) 
+        {
+            throw new Exception("Number is out of range");
+        }
+        $giga = floor($number / 1000000);
+        // Millions (giga)
+        $number -= $giga * 1000000;
+        $kilo = floor($number / 1000);
+        // Thousands (kilo)
+        $number -= $kilo * 1000;
+        $hecto = floor($number / 100);
+        // Hundreds (hecto)
+        $number -= $hecto * 100;
+        $deca = floor($number / 10);
+        // Tens (deca)
+        $n = $number % 10;
+        // Ones
+        $result = "";
+        if ($giga) 
+        {
+            $result .= $this->convert_number($giga) .  "Million";
+        }
+        if ($kilo) 
+        {
+            $result .= (empty($result) ? "" : " ") .$this->convert_number($kilo) . " Thousand";
+        }
+        if ($hecto) 
+        {
+            $result .= (empty($result) ? "" : " ") .$this->convert_number($hecto) . " Hundred";
+        }
+        $ones = array("", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eightteen", "Nineteen");
+        $tens = array("", "", "Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eigthy", "Ninety");
+        if ($deca || $n) {
+            if (!empty($result)) 
+            {
+                $result .= " and ";
+            }
+            if ($deca < 2) 
+            {
+                $result .= $ones[$deca * 10 + $n];
+            } else {
+                $result .= $tens[$deca];
+                if ($n) 
+                {
+                    $result .= "-" . $ones[$n];
+                }
+            }
+        }
+        if (empty($result)) 
+        {
+            $result = "zero";
+        }
+        return $result;
+    }
+}
+
+$row = $con->query("SELECT * FROM `websetting`")->fetch_assoc();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../assets/recipt/css/bootstrap.min.css">
+     <link rel="stylesheet" href="../assets/recipt/css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <title><?php echo $row['NAME']?>Recharge Recipt</title>
+     <style>
+         .center {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              /*width: 50%;*/
+            }
+        
+     </style>
+</head>
+
+<body>
+
+     <section  id="print-area">
+          <div class="container">
+               <div class="row d-flex justify-content-center" >
+                   <div class="col-sm-11 btns mb-3">
+                       <button class="btn btn-primary printr" id="printr" onclick='printr()'><i class="fas fa-print"></i> Print Recipt</button>
+                       <!--<button class="btn btn-danger" id="goBack" onclick="goBack()"><i class="fas fa-print"></i> Go Back</button>-->
+                       <button  id="close_page" class="btn btn-danger">Close</button>
+                   </div>
+                   
+                    <div class="col-11">
+                         <div class="table-responsive" id="reciept-table">
+          
+                              <table class="table table-bordered">
+                                   <thead>
+                                        <tr>
+                                            <th colspan="4" class="">Transaction Date : <?php echo $static_bbps['TIMESTAMP'] ?></th>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        <!--  <tr>-->
+                                        <!--     <td>Merchant Name: <?php #echo $user['FIRST_NAME'].' '.$user['LAST_NAME'] ?></td>-->
+                                        <!--     <td  colspan="4">Merchant Mobile Number : <?php #echo $user['MOBILE'] ?></td>-->
+                                        <!--</tr>-->
+                                     
+                                        <tr>
+                                              <td>Service Provider: <?php echo $op[0] ?></td>
+                                              <td>Service Number : <?php echo $static_bbps['MOBILE'] ?></td>
+                                              <td>Transaction Id: <?php echo  $static_bbps['REFERENCE_ID'] ?></td>
+                                        </tr>
+                                       
+                                        <tr>
+                                             <th colspan="5" style="text-align:center">Transaction Summary:</th>
+                                        </tr>
+                                        <tr style="text-align: center; ">
+                                             <td>Amount</td>
+                                             <td>Status</td>
+                                             <td colspan="2">Message</td>
+                                        </tr>
+                                        <?php
+                                            $rep = $con->query("SELECT * FROM `recharge_transaction` WHERE REFERENCE_ID = '$refrence'");
+                                       $totl=0;
+                                        while($orrep = $rep->fetch_assoc()){
+                                            $totl += $orrep['AMOUNT'];
+                                        ?>
+                                        <tr style="text-align: center; ">
+                                         <td><?php echo $orrep['AMOUNT']?></td>
+                                         <td><?php echo $st[0]?></td>
+                                         <td colspan="2"><?php echo $orrep['STATUS']?></td>
+                                        
+                                        </tr>
+                                       <?php  } ?>
+                                        <tr class="tfooter">
+                                             <td colspan="8">
+                                                  <span class="fw-bold">Total Amount Rs. : <?php echo $totl ?> /-</span> <br>
+                                                  <!--<h6>Amount in Words : Five Thousand Fourty Only.</h6>-->
+                                                  <span>Amount in Words : <?php 
+                                                  $class_obj = new numbertowordconvertsconver();
+                                                    $convert_number = $totl;
+                                                    echo $class_obj->convert_number($convert_number); 
+                                                  ?> Rupees Only</span>
+                                                  
+                                                  <div style='text-align:right;'>
+                                               <img width="60" src="../../assets/images/<?php echo $row['I_LOGO']?>"  class="img-fluid logo " alt="logo">
+                                            </div>
+                                               
+                                                  <div class="copyright" style='text-align: center;'>
+                                                        © Copyright <strong><span><?php echo $row['NAME']?></span></strong>. All Rights Reserved
+                                                      </div>
+                                            
+                                             
+                                               </td>
+                                        </tr>
+
+                                   </tbody>
+
+                              </table>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <script src="assets/recipt/js/bootstrap.bundle.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script type="text/javascript">
+    //   function goBack() {
+    //           window.location.replace('index');
+    //         }
+
+(function() {
+    'use strict';
+    $("#close_page").click(function() {
+            window.close();
+    });
+})();
+     </script>
+          <script type="text/javascript">
+          var printbtn = document.querySelector(".printr");
+          var content = document.getElementById("reciept-table");
+          var backup = document.body.innerHTML;
+
+          printbtn.addEventListener("click", function () {
+
+               document.body.innerHTML = content.innerHTML;
+               window.print();
+               document.body.innerHTML = backup;
+          });
+     </script>
+</body>
+
+</html>

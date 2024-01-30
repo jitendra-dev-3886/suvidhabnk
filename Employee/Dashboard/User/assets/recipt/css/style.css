@@ -1,0 +1,40 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+thead tr th.thedd{
+     vertical-align: middle;
+     padding: 1.8rem;
+}
+thead tr th img.logo{
+     padding: 0 2rem 2rem;
+}
+thead tr th img.bbps{
+     max-width: 20rem;
+     padding: 0 1.8rem 2rem;
+}
+
+tr.tfooter td{
+     padding: 2rem 2rem 0 2rem;
+}
+
+tr.tfooter td h6{
+     margin: 1.3rem 0;
+}
+
+tr.tfooter td p{
+     width: 34rem;
+     text-align: center;
+     margin: 5rem 0 0 18rem;
+}
+.btn{
+     transition: 0.3s ease-out;
+}
+
+.btn:focus{
+     box-shadow: none;
+     outline: none;
+}
+
+.btn:hover{
+     transform: translateY(-5px);
+     box-shadow: 0 0.3px 15px 0px rgba(17, 50, 77, 0.4);
+}

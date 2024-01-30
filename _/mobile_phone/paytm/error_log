@@ -1,0 +1,55 @@
+[03-Sep-2021 14:31:24 Asia/Kolkata] PHP Notice:  session_start(): A session had already been started - ignoring in /home/cosmosso/public_html/control_panel/user/include/fetch_data.php on line 4
+[03-Sep-2021 22:53:27 Asia/Kolkata] PHP Notice:  session_start(): A session had already been started - ignoring in /home/cosmosso/public_html/control_panel/user/include/fetch_data.php on line 4
+[08-Sep-2021 15:49:00 Asia/Kolkata] PHP Notice:  session_start(): A session had already been started - ignoring in /home/cosmosso/public_html/Dashboard/User/include/fetch_data.php on line 4
+[08-Sep-2021 15:49:01 Asia/kolkata] PHP Notice:  Undefined index: token in /home/cosmosso/public_html/Dashboard/User/api/paytm/paytm.php on line 48
+[10-Sep-2021 19:07:17 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:07:17 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:07:17 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:07:17 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:07:23 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:07:23 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:07:23 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:07:23 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:07:28 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:07:28 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:07:28 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:07:28 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:22:22 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:22:22 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:22:22 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:22:22 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:22:59 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:22:59 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 97
+[10-Sep-2021 19:22:59 Asia/Kolkata] PHP Notice:  Undefined variable: user in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:22:59 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 99
+[10-Sep-2021 19:40:31 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 19:40:31 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 19:54:50 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 19:54:50 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:02:02 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:02:02 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:11:04 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:11:04 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:14:30 Asia/kolkata] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php:48
+Stack trace:
+#0 /home/cosmosso/public_html/mobile_phone/paytm/paytm.php(123): insert_allreport('74', 'aO6vVgeXuK', 'Payout', '672', 662, '10', 'Debit', 'Payout Transact...', '85.236.241.40', 'Mi A3')
+#1 {main}
+  thrown in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 48
+[10-Sep-2021 20:15:12 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:15:12 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:23:48 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:23:48 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:23:58 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:23:58 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:24:01 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:24:01 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:24:04 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:24:04 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:24:14 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:24:14 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:24:17 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[10-Sep-2021 20:24:17 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[11-Sep-2021 12:59:42 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[11-Sep-2021 12:59:42 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[11-Sep-2021 12:59:59 Asia/kolkata] PHP Notice:  Undefined variable: _SESSION in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55
+[11-Sep-2021 12:59:59 Asia/kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/cosmosso/public_html/mobile_phone/paytm/paytm.php on line 55

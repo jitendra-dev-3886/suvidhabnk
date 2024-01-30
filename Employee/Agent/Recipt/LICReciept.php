@@ -1,0 +1,157 @@
+<?php
+include("../../Db/config.php");
+$refrence = $_GET['refrence_id'];
+$recipt = $con->query("SELECT * FROM lic_transaction WHERE REFFRENCE_ID = '$refrence'")->fetch_assoc();
+$user1 = $con->query("SELECT PARTNER_ID,MOBILE FROM user WHERE ID = '{$recipt['USER_ID']}'")->fetch_assoc();
+
+$response_data = json_decode($recipt['RESPONSE'],true);
+$receipt_data = json_decode($recipt['SEND_DATA'],true);
+// echo "<pre>";
+// print_r($response_data);
+// echo "</pre>";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fintechdev.github.io/x2-ui/css/styleguide.css">
+    
+    <style>
+        .receipt__paper {
+    align-items: center;
+    border-radius: 5px;
+    border-top: 5px solid #353f4c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*min-height: 550px;*/
+    min-height: 760px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.receipt__info {
+    animation: slideDown 1.5s;
+    background-color: #FFF;
+    box-shadow: 0 -4px 3px 0 rgb(0 0 0 / 20%);
+    /*height: 432px;*/
+    height: 630px;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    transform-origin: 50% 0%;
+    width: 98%;
+    z-index: 101;
+}
+.receipt__headline {
+    padding: 0px;
+}
+.receipt__title {
+    padding: 0;
+    margin: 0px;
+}
+    </style>
+</head>
+<body>
+<div class="receipt">
+    <div class="receipt__holder">
+        <div class="receipt__headline">
+            <h4 class="headline__title receipt__title">LIC Receipt </h4>
+        </div>
+        <div class="receipt__paper">
+            <div id="reciptid" class="receipt__info">
+        <img src="Logo/LIC-Logo.jpg" alt="AdminLTE Logo" class="rounded mx-auto d-block" width="90">
+        
+
+        
+        
+                <div class="receipt__block">
+                    <label>Time:</label>
+                    <p><?php echo $recipt['TIMESTAMP']?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Date:</label>
+                    <p><?php echo $recipt['FILTER_DATE'] ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Mobile Number:</label>
+                    <p><?php echo $user1['MOBILE'] ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Member ID:</label>
+                    <p><?php echo $user1['PARTNER_ID'] ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Email:</label>
+                    <p><?php echo $receipt_data['ad1'] ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>CA Number:</label>
+                    <p><?php echo $recipt['CA_NUM'] ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Refference Id</label>
+                    <p><?php echo $recipt['REFFRENCE_ID'] ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Status:</label>
+                    <p><?php echo $recipt['STATUS'] ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Cell Number:</label>
+                    <p><?php echo $receipt_data['bill_fetch']['cellNumber']  ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Due Date:</label>
+                    <p><?php echo $receipt_data['bill_fetch']['dueDate']  ?></p>
+                </div>
+                <div class="receipt__block">
+                    <label>Amount:</label>
+                    <h4><?php echo $recipt['AMOUNT'] ?></h4>
+                </div>
+                <div class="receipt__block" style="text-align: center;">
+                    <p class="text-center">Message : <?php echo $response_data['message'] ?></p>
+                </div>
+            </div>
+            <div class="receipt__actions is-flex-centered is-print-hidden">
+                <button  onclick="javascript:location.replace('../LICReport.php?mode=ONLINE')" class="button receipt__button">Back</button>
+                <button onclick="printr('reciptid')" class="button button--action receipt__button">Print</button>
+            </div>
+        </div>
+        <!--<div class="receipt__footer is-print-hidden">-->
+        <!--    <nav class="navbar__holder">-->
+        <!--        <li class="langbar__item is-active">-->
+        <!--            <button class="langbar__button button button--rounded">EN</button>-->
+        <!--        </li>-->
+        <!--        <li class="langbar__item">-->
+        <!--            <button class="langbar__button button button--rounded">FR</button>-->
+        <!--        </li>-->
+        <!--        <li class="langbar__item">-->
+        <!--            <button class="langbar__button button button--rounded">ES</button>-->
+        <!--        </li>-->
+        <!--    </nav>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<script>
+    
+    function printr(id){
+        var bodye = document.querySelector("body");
+        var recipte = document.getElementById(id);
+        
+        bodye =  document.querySelector("body");
+        
+        window.print();
+        
+        bodye = document.querySelector("body");
+    }
+    
+</script>
+
+
+</body>
+</html>
